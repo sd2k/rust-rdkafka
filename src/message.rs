@@ -379,6 +379,7 @@ pub struct OwnedHeaders {
 }
 
 unsafe impl Send for OwnedHeaders {}
+unsafe impl Sync for OwnedHeaders {}
 
 impl OwnedHeaders {
     /// Create a new `OwnedHeaders` struct with initial capacity 5.
