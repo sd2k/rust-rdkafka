@@ -211,7 +211,7 @@ fn build_librdkafka() {
 
     if env::var("CARGO_FEATURE_GSSAPI").is_ok() {
         config.define("WITH_SASL", "1");
-        println!("cargo:rustc-link-lib=sasl2");
+        println!("cargo:rustc-link-lib=static=sasl2");
     } else {
         config.define("WITH_SASL", "0");
     }
